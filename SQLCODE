@@ -1,0 +1,49 @@
+create database employees
+
+use employees
+
+create table employees(
+	id int identity primary key,
+	firstname varchar(50),
+	lastname varchar(50),
+	title varchar(50),
+	age int,
+	salary float
+);
+
+insert into employees (firstname, lastname, title, age, salary)
+values ('Jonie', 'Weber', 'Secretary', '28', '19500.00'),
+('Posty', 'Weber', 'Programmer', '32', '45300.00'),
+('Dirk', 'Smith', 'Programmer II', '45', '75020.00')
+
+update employees
+set lastname = 'Weber-Williams'
+where id = 1;
+
+update employees
+set age = '46'
+where id = 3;
+
+update employees
+set title = 'Admistrative Assistant'
+where title = 'secretary';
+
+update employees
+set salary = '23000.00'
+where id = 1;
+
+update employees
+set salary = '49800.00'
+where id = 2;
+
+update employees 
+set salary = '79520.00'
+where id =3;
+
+update employees
+set title = 'Programmer III'
+where title = 'Programmer II';
+ 
+ update employees 
+ set title = 'Programmer II'
+ where title = 'Programmer';
