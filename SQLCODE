@@ -12,16 +12,16 @@ create table employees(
 );
 
 insert into employees (firstname, lastname, title, age, salary)
-values ('Jonie', 'Weber', 'Secretary', '28', '19500.00'),
-('Posty', 'Weber', 'Programmer', '32', '45300.00'),
-('Dirk', 'Smith', 'Programmer II', '45', '75020.00')
+values ('Jonie', 'Weber', 'Secretary', 28, 19500.00),
+('Posty', 'Weber', 'Programmer', 32, 45300.00),
+('Dirk', 'Smith', 'Programmer II', 45, 75020.00)
 
 update employees
 set lastname = 'Weber-Williams'
 where id = 1;
 
 update employees
-set age = '46'
+set age = 46
 where id = 3;
 
 update employees
@@ -29,16 +29,12 @@ set title = 'Admistrative Assistant'
 where title = 'secretary';
 
 update employees
-set salary = '23000.00'
-where id = 1;
+set salary = salary+3500
+where salary <30000;
 
 update employees
-set salary = '49800.00'
-where id = 2;
-
-update employees 
-set salary = '79520.00'
-where id =3;
+set salary = salary+4500
+where salary >33500;
 
 update employees
 set title = 'Programmer III'
